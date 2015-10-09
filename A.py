@@ -16,3 +16,11 @@
 | 8 3 5 4 5 1 |       |
 +-------------+-------+
 '''
+inp = open("input.txt","r")
+wr = open("output.txt","w")
+s = list(inp.readlines())
+ns = list(map("int",s[1].split(" ")))
+for i in range(int(s[0])):
+  if ns.count(ns[i]) == 2:
+    print(ns[i])
+    break
