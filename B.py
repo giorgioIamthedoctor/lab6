@@ -47,8 +47,10 @@ wr = open("output.txt","w")
 s = list(inp.readlines())
 n = int(s[0])
 kol = 0
+n = int(input())
+money = list(map(int,str(input()).split(" ")))
 newkol = 0
-money = list(map(int,s[1].split(" ")))
+#money = list(map(int,s[1].split(" ")))
 for i in range(n):
   if money[i] == 5:
     kol += 1
