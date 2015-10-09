@@ -57,6 +57,7 @@ for i in range(n):
       kol -= (money[i] - 5)/5
     else:
       newkol += (money[i] - 5)/5 - kol
+      kol = 0
 wr.write(str(int(newkol)))
 wr.close()
 inp.close()
