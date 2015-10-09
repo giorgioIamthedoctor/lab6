@@ -42,3 +42,19 @@
 | 50 5 5 5 |       |
 +----------+-------+
 '''
+inp = open("input.txt",r)
+wr = open("output.txt",w)
+s = list(inp.readlines())
+n = int(s[0])
+kol = 0
+newkol = 0
+money = list(map(int,s[1].split(" ")))
+for i in range(n):
+  if money[i] == 5:
+    kol += 1
+  else:
+    if kol >= (money[i] - 5)/5:
+      kol -= (money[i] - 5)/5
+    else:
+      newkol += (money[i] - 5)/5 - kol
+  wr.write(str(newkol))
