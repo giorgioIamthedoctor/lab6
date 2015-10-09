@@ -42,8 +42,8 @@
 | 50 5 5 5 |       |
 +----------+-------+
 '''
-inp = open("input.txt","r")
-wr = open("output.txt","w")
+inp = open("input2.txt","r")
+wr = open("output2.txt","w")
 s = list(inp.readlines())
 n = int(s[0])
 kol = 0
