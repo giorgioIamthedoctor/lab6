@@ -42,12 +42,12 @@
 | 50 5 5 5 |       |
 +----------+-------+
 '''
-inp = open("input.txt","r")
-wr = open("output.txt","w")
-s = list(inp.readlines())
+x= open("input.txt","r")
+y = open("output.txt","w")
+s = list(x.readlines())
 n = int(s[0])
 kol = 0
-newkol = 0
+nk = 0
 money = list(map(int,s[1].split(" ")))
 for i in range(n):
   if money[i] == 5:
@@ -56,8 +56,5 @@ for i in range(n):
     if kol >= (money[i] - 5)/5:
       kol -= (money[i] - 5)/5
     else:
-      newkol += (money[i] - 5)/5 - kol
-      kol = 0
-wr.write(str(int(newkol)))
-wr.close()
-inp.close()
+      nk += (money[i] - 5)/5 - kol
+y.write(str(int(nk)))
