@@ -42,19 +42,20 @@
 | 50 5 5 5 |       |
 +----------+-------+
 '''
-x= open("input.txt","r")
-y = open("output.txt","w")
-s = list(x.readlines())
-n = int(s[0])
-kol = 0
-nk = 0
-money = list(map(int,s[1].split(" ")))
+k=0
+l=0
+input=open('input.txt','r')
+output=open('output.txt','w')
+n=int(input.readline())
+a=input.readline().split()
 for i in range(n):
-  if money[i] == 5:
-    kol += 1
-  else:
-    if kol >= (money[i] - 5)/5:
-      kol -= (money[i] - 5)/5
+    kupura=int(a[i])
+    kupura=(kupura-5)//5
+    if kupura==0:
+        k-=1
+    elif kupura<(-k):
+        k+=kupura
     else:
-      nk += (money[i] - 5)/5 - kol
-y.write(str(int(nk)))
+        l+=k+kupura
+        k=0
+print(l,file=output)
